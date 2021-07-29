@@ -1,0 +1,166 @@
+
+
+/* global variables */
+
+:root {
+    /* primary color*/
+    --clr-primary-1: hsl(179, 62%, 43%);
+     --clr-primary-2: hsl(71, 73%, 54%);
+
+    /* neutral color */
+    --clr-primary-3:hsl(204, 43%, 93%) ;
+    --clr-primary-4: hsl(218, 22%, 72%);
+    --clr-primary-5: hsl(179, 61%, 54%);
+
+    --clr-white: #fff;
+    --clr-black: #222;
+    --ff-primary: 'Karla', sans-serif;
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+  }
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  font-weight: 400;
+  color: var(--clr-primary-4);
+  line-height: 1.5;
+  font-size: 10px = 1rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+h1 {
+  font-size: 2rem;
+  color:var(--clr-primary-1);
+  font-weight:600;
+}
+h2 {
+  font-size: 1.6rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+  font-size:1.2rem;
+  color: var(--clr-primary-4);
+  line-height: 1.6;
+}
+@media  screen and (max-width:760px) {
+h1{
+font-size:1.8rem
+}
+h2{
+font-size: 1.2rem
+}
+p{
+font-size: 1rem   
+}
+}
+/* global css rules */
+
+.container{
+    display:grid;
+    place-items: center;
+    background-color: var(--clr-primary-3);
+    max-width:100vw;
+    min-height:100vh;
+}
+
+.card{
+max-width:50%;
+margin:auto;
+height:auto;
+overflow: hidden;
+border-radius:15px;
+box-shadow: var(--light-shadow);
+}
+
+
+
+.header-section{
+    background-color: var(--clr-white);
+    padding:3rem 4rem;
+}
+
+.special{
+    color:var(--clr-primary-2);
+}
+
+.body-font{
+    color:var(--clr-primary-4);
+    font-weight:400;
+}
+.body-main{
+    color:var(--clr-primary-4);
+}
+
+.second-section{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+   
+}
+
+.card-inner{
+    padding:3rem 3rem;
+    background-color:var(--clr-primary-1)
+}
+.secondary{
+    color:var(--clr-white);
+
+}
+.secondary-clr{
+background-color: var(--clr-primary-5);
+}
+
+.btn{
+    color:var(--clr-white);
+    background:var(--clr-primary-2);
+    cursor:pointer;
+    border:0;
+    padding:1.2rem 5rem;
+    display:inline;   
+    border-radius:5px;
+    font-size:1.25rem;
+}
+.price{
+    font-size:3rem;
+    color:var(--clr-white);
+}
+
+
+@media screen and (max-width:760px){
+
+    .card{
+        max-width:90%;
+        padding:auto 3rem;
+        margin:3rem auto;
+    }
+    .header-section{
+        padding:2rem;
+    } 
+    .second-section{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}
