@@ -10,14 +10,14 @@
     /* neutral color */
     --clr-primary-3:hsl(204, 43%, 93%) ;
     --clr-primary-4: hsl(218, 22%, 72%);
-    --clr-primary-5: hsl(179, 61%, 54%);
+    --clr-primary-5: hsl(179, 52%, 49%);
 
     --clr-white: #fff;
     --clr-black: #222;
     --ff-primary: 'Karla', sans-serif;
     --transition: all 0.3s linear;
     --spacing: 0.1rem;
-    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     --max-width: 1170px;
     --fixed-width: 620px;
@@ -48,7 +48,7 @@ h2,
 h3,
 h4 {
   line-height: 1.25;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   font-family: var(--ff-primary);
 }
 h1 {
@@ -66,9 +66,13 @@ p {
   color: var(--clr-primary-4);
   line-height: 1.6;
 }
-@media  screen and (max-width:760px) {
+@media  screen and (max-width:830px) {
+  h1,
+  h2{
+    margin-bottom:0.7rem;
+  }
 h1{
-font-size:1.8rem
+font-size:1.5rem
 }
 h2{
 font-size: 1.2rem
@@ -79,6 +83,9 @@ font-size: 1rem
 }
 /* global css rules */
 
+
+/* utilities */
+
 .container{
     display:grid;
     place-items: center;
@@ -88,8 +95,8 @@ font-size: 1rem
 }
 
 .card{
-max-width:50%;
-margin:auto;
+max-width:65%;
+margin:4rem auto;
 height:auto;
 overflow: hidden;
 border-radius:15px;
@@ -108,8 +115,9 @@ box-shadow: var(--light-shadow);
 }
 
 .body-font{
-    color:var(--clr-primary-4);
+    color:var(--clr-primary-3);
     font-weight:400;
+    margin:1rem auto;
 }
 .body-main{
     color:var(--clr-primary-4);
@@ -122,9 +130,10 @@ box-shadow: var(--light-shadow);
 }
 
 .card-inner{
-    padding:3rem 3rem;
+    padding:3rem 4rem;
     background-color:var(--clr-primary-1)
 }
+
 .secondary{
     color:var(--clr-white);
 
@@ -138,18 +147,28 @@ background-color: var(--clr-primary-5);
     background:var(--clr-primary-2);
     cursor:pointer;
     border:0;
-    padding:1.2rem 5rem;
+    padding:0.8rem 3rem;
     display:inline;   
     border-radius:5px;
     font-size:1.25rem;
+    box-shadow: var(--dark-shadow);
+    width:100%;
 }
 .price{
     font-size:3rem;
     color:var(--clr-white);
+    font-weight:600;
+    margin-right:0.5rem;
+}
+.main{
+  color:var(--clr-primary-3);
+  margin-bottom:1.5rem;
 }
 
+/* utilities */
 
-@media screen and (max-width:760px){
+/* mobile version  */
+@media screen and (max-width:830px){
 
     .card{
         max-width:90%;
@@ -162,5 +181,14 @@ background-color: var(--clr-primary-5);
     .second-section{
         display:grid;
         grid-template-columns: 1fr;
+    }
+    .card-inner{
+      padding:2rem 2rem;
+    }
+    .btn{
+      padding: 0.6rem 5rem;
+      display:block;
+      width:100%;
+      font-size:1rem;
     }
 }
